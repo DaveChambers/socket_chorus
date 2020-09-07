@@ -99,6 +99,8 @@ int main()
     ifile >> buffer;
     strncpy(idx, buffer, 2);
     subBuff = buffer + 3;
+    int sec[] = {16, 11, 10, 11, 1, 2, 6, 3, 3, 2, 3, 9, 2, 2, 3, 3, 3, 3, 6, 2};
+    int secIdx = 0;
     for(int i=1; i<=21; ++i)
     {
         int iret;
@@ -119,7 +121,7 @@ int main()
             subBuff = buffer + 3;
         }
         
-        sleep(2);
+        sleep(sec[secIdx++]);
         charIncr(cnt);
     }
     
